@@ -7,5 +7,5 @@ class Book < ApplicationRecord
   validates :name, length: { maximum: 25 }
   validates :price, numericality: { greater_than_or_equal_to: 0 }
 
-  enum sales_status: [:reservation, :now_on_sale, :end_of_print]
+  enum :sales_status, [:reservation, :now_on_sale, :end_of_print]
 end
